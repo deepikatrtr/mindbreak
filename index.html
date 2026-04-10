@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mindbreak - Stay Focused, Take Breaks</title>
+    <style>
+        :root {
+            --primary: #3a7d44;
+            --primary-light: #52a45e;
+            --secondary: #1e1e1e;
+            --text-main: #333333;
+            --text-muted: #666666;
+            --bg-body: #f8faf9;
+            --bg-card: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* Nav */
+        header {
+            background-color: var(--bg-card);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            margin-left: 2rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero */
+        .hero {
+            padding: 8rem 2rem 5rem;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--secondary);
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 2.5rem;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(58, 125, 68, 0.3);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-light);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(58, 125, 68, 0.4);
+        }
+
+        /* Features */
+        .features {
+            padding: 4rem 2rem;
+            background-color: var(--bg-card);
+        }
+
+        .features-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            padding: 2rem;
+            border-radius: 16px;
+            background: var(--bg-body);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary);
+            color: #ffffff;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .footer-links {
+            margin-top: 1.5rem;
+        }
+
+        .footer-links a {
+            color: #a0a0a0;
+            text-decoration: none;
+            margin: 0 1rem;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #ffffff;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Mindbreak</a>
+            <div class="nav-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms & Conditions</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Your Mental Break Reminder.</h1>
+            <p>Designed for desk workers to stay focused, avoid burnout, and build healthy habits with timely, customizable break reminders.</p>
+            <a href="#download" class="btn-primary">Get it on Google Play</a>
+        </section>
+
+        <section class="features">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⏲️</div>
+                    <h3>Smart Reminders</h3>
+                    <p>Customize your work and break intervals to fit your ideal workflow.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💆</div>
+                    <h3>Reduce Burnout</h3>
+                    <p>Gentle prompts to step away and rest your eyes, body, and mind.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Private by Design</h3>
+                    <p>Everything runs on your device. We respect your peace and your data.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Mindbreak App. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms & Conditions</a>
+            <a href="mailto:support@example.com">Contact Us</a>
+        </div>
+    </footer>
+</body>
+</html>
